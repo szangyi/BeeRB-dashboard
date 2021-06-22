@@ -76,7 +76,7 @@ class App extends React.Component {
           visible={this.state.modal1}
           transparent
           maskClosable={false}
-          onCancel={this.onClose("modal1")}
+          // onCancel={this.onClose("modal1")}
           onOk={this.onOk("modal1")}
           title="Log in"
           className="login-modal"
