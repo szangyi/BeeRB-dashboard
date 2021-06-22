@@ -9,7 +9,7 @@ import Bartenders from "./components/bartenders";
 import Taps from "./components/taps";
 import Storage from "./components/storage";
 import OrdersServing from "./components/ordersServing";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import RICIBs from "react-individual-character-input-boxes";
 
 class App extends React.Component {
@@ -22,22 +22,22 @@ class App extends React.Component {
       storage: [],
       taps: [],
       modal1: true,
+      isUserAuthenticated: true,
     };
   }
 
   onClose = (key) => () => {
-    console.log("cloooose");
     this.setState({
       [key]: false,
     });
   };
 
   onOk = (key) => () => {
-    console.log("cloooose");
     this.setState({
       [key]: false,
     });
     document.getElementById("Appid").classList.remove("hidden");
+    <Redirect to="/orders" />;
   };
 
   componentDidMount() {
@@ -145,6 +145,13 @@ class App extends React.Component {
             </header>
 
             <Switch>
+              <Route
+                exact
+                path="/"
+                render={() => {
+                  return this.state.isUserAuthenticated ? <Redirect to="/orders" /> : <Redirect to="/bartenders" />;
+                }}
+              />
               <Route path="/orders">
                 <div className="orders-container-main">
                   <div className="orders-serving">
