@@ -26,11 +26,11 @@ class App extends React.Component {
     };
   }
 
-  onClose = (key) => () => {
-    this.setState({
-      [key]: false,
-    });
-  };
+  // onClose = (key) => () => {
+  //   this.setState({
+  //     [key]: false,
+  //   });
+  // };
 
   onOk = (key) => () => {
     this.setState({
