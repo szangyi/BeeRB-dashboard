@@ -26,11 +26,11 @@ class App extends React.Component {
     };
   }
 
-  // onClose = (key) => () => {
-  //   this.setState({
-  //     [key]: false,
-  //   });
-  // };
+  onClose = (key) => () => {
+    this.setState({
+      [key]: false,
+    });
+  };
 
   onOk = (key) => () => {
     this.setState({
@@ -76,7 +76,7 @@ class App extends React.Component {
           visible={this.state.modal1}
           transparent
           maskClosable={false}
-          // onCancel={this.onClose("modal1")}
+          onCancel={this.onClose("modal1")}
           onOk={this.onOk("modal1")}
           title="Log in"
           className="login-modal"
