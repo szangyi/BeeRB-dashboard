@@ -3,7 +3,7 @@ import "./App.scss";
 import React from "react";
 // import { setState } from 'react';
 import "antd/dist/antd.css";
-import { Input, Button, Modal, Form, Radio } from "antd";
+import { Button, Modal, Form, Radio } from "antd";
 import Orders from "./components/orders";
 import Bartenders from "./components/bartenders";
 import Taps from "./components/taps";
