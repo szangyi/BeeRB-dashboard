@@ -101,7 +101,7 @@ class App extends React.Component {
             <Radio.Group>
               <Radio.Button value="peter">Peter</Radio.Button>
               <Radio.Button value="jonas">Jonas</Radio.Button>
-              <Radio.Button value="danny">Danny</Radio.Button>
+              <Radio.Button value="dannie">Dannie</Radio.Button>
               <Radio.Button value="manager">Manager</Radio.Button>
             </Radio.Group>
             <RICIBs

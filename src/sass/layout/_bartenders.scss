@@ -28,25 +28,28 @@ div.bartenders-container {
   p {
     font-family: "Courier-Prime-Regular";
     font-size: 1rem;
-    padding: 0.15rem;
+    // padding: 0.15rem;
     //border-bottom: solid 2px #011626;
+    // padding: 17.7px;
+    padding: 1em;
+    margin: 0;
   }
   .border {
     border: solid 1px #011626;
     height: 0;
-    width: 220px;
+    width: 100%;
     margin: 0;
     padding: 0;
   }
 }
-.working{
-  color: $green !important
+.working {
+  color: $green !important;
 }
-.ready{
-  color:$orange !important
+.ready {
+  color: $orange !important;
 }
-.serving{
-  color: $red !important
+.serving {
+  color: $red !important;
 }
 
 .bartenders-component > div {
@@ -55,8 +58,8 @@ div.bartenders-container {
   justify-items: center;
   //justify-content: space-between;
   background-color: $light-grey;
-  min-width: 220px;
-  margin-left: 20px;
+  width: 25vw;
+  margin-left: 0.6em;
   padding-top: 1rem;
 
   /*   padding: 20px 50px;
@@ -101,7 +104,11 @@ div.bartenders-container {
     text-transform: uppercase;
     margin: 0;
     border-bottom: solid 2px #011626;
-    padding: 1rem;
+    // padding: 0.88rem;
+    height: 3.35em;
+    display: flex;
+    align-items: center;
+    line-height: 1em;
   }
   h2:first-child {
     border-top: solid 2px #011626;
