@@ -137,7 +137,7 @@ class App extends React.Component {
             <Switch>
               <Route
                 exact
-                path="/"
+                path="app"
                 render={() => {
                   return this.state.isUserAuthenticated ? <Redirect to="/orders" /> : <Redirect to="/" />;
                 }}
