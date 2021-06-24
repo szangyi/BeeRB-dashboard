@@ -22,20 +22,22 @@ class App extends React.Component {
       storage: [],
       taps: [],
       modal1: true,
-      isUserAuthenticated: true,
+      isUserAuthenticated: false,
     };
   }
 
-  onClose = (key) => () => {
+  onClose = (modal1) => () => {
     this.setState({
-      [key]: false,
+      [modal1]: false,
     });
   };
 
-  onOk = (key) => () => {
+  onOk = (modal1, isUserAuthenticated) => () => {
     this.setState({
-      [key]: false,
+      [modal1]: false,
+      [isUserAuthenticated]: true,
     });
+
     document.getElementById("Appid").classList.remove("hidden");
     <Redirect to="/orders" />;
   };
@@ -86,18 +88,6 @@ class App extends React.Component {
             <p>Please log in first</p>
           </div>
           <Form>
-            {/* <Form.Item
-              label="Username"
-              name="username"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your username!",
-                },
-              ]}
-            >
-              <Input />
-            </Form.Item> */}
             <Radio.Group>
               <Radio.Button value="peter">Peter</Radio.Button>
               <Radio.Button value="jonas">Jonas</Radio.Button>
@@ -149,7 +139,7 @@ class App extends React.Component {
                 exact
                 path="/"
                 render={() => {
-                  return this.state.isUserAuthenticated ? <Redirect to="/orders" /> : <Redirect to="/bartenders" />;
+                  return this.state.isUserAuthenticated ? <Redirect to="/orders" /> : <Redirect to="/" />;
                 }}
               />
               <Route path="/orders">
