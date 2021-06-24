@@ -32,10 +32,9 @@ class App extends React.Component {
     });
   };
 
-  onOk = (modal1, isUserAuthenticated) => () => {
+  onOk = (modal1) => () => {
     this.setState({
       [modal1]: false,
-      // [isUserAuthenticated]: true,
     });
 
     document.getElementById("Appid").classList.remove("hidden");
