@@ -22,7 +22,7 @@ class App extends React.Component {
       storage: [],
       taps: [],
       modal1: true,
-      isUserAuthenticated: false,
+      isUserAuthenticated: true,
     };
   }
 
@@ -35,7 +35,7 @@ class App extends React.Component {
   onOk = (modal1, isUserAuthenticated) => () => {
     this.setState({
       [modal1]: false,
-      [isUserAuthenticated]: true,
+      // [isUserAuthenticated]: true,
     });
 
     document.getElementById("Appid").classList.remove("hidden");
@@ -137,7 +137,7 @@ class App extends React.Component {
             <Switch>
               <Route
                 exact
-                path="app"
+                path="/"
                 render={() => {
                   return this.state.isUserAuthenticated ? <Redirect to="/orders" /> : <Redirect to="/" />;
                 }}
