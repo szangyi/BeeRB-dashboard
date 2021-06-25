@@ -38,7 +38,6 @@ class App extends React.Component {
     });
 
     document.getElementById("Appid").classList.remove("hidden");
-    <Redirect to="/orders" />;
   };
 
   componentDidMount() {
